@@ -1,4 +1,6 @@
-const configuredNumber = process.env.NEXT_PUBLIC_BOOKING_WHATSAPP?.trim() ?? "";
+import { studioPhone } from "@/data/site";
+
+const configuredNumber = process.env.NEXT_PUBLIC_BOOKING_WHATSAPP?.trim() || studioPhone.international;
 const phoneNumber = configuredNumber.replace(/[+\s().-]/g, "");
 const studioChatUrl = /^\+?[\d\s().-]+$/.test(configuredNumber) && /^[1-9]\d{6,14}$/.test(phoneNumber)
   ? `https://wa.me/${phoneNumber}`

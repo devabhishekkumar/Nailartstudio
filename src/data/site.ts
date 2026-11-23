@@ -1,3 +1,5 @@
+export const studioPhone = { display: "098617 29966", international: "+919861729966" };
+
 export type Service = {
   id: string;
   name: string;

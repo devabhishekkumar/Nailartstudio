@@ -16,14 +16,13 @@ A responsive nail-art studio website inspired by the *layout and visual mood* of
 - Split-screen hero, signature services, inspiration banners, studio/about section, gallery, step-by-step experience, newsletter and footer.
 - Gallery lightbox with keyboard support (left/right arrows, Escape).
 - Appointment-request form with service selection, name, phone, preferred date/time and notes.
-- WhatsApp chat and booking: set `NEXT_PUBLIC_BOOKING_WHATSAPP` in `.env.local` to the studio number with its country code. Restart the development server or rebuild for production. The floating chat button opens a panel with a WhatsApp link for general enquiries. The booking form prefills appointment details. Clients send the message in WhatsApp, and the studio confirms availability.
-- If no WhatsApp number is configured, booking runs as a local demonstration, presenting a message users can copy. It does not store or transmit lead data.
+- WhatsApp chat and booking: the studio phone number is used by default. To use a different WhatsApp number, set `NEXT_PUBLIC_BOOKING_WHATSAPP` in `.env.local` with its country code. Restart the development server or rebuild for production. The floating chat button opens a panel with a WhatsApp link for general enquiries. The booking form prefills appointment details. Clients send the message in WhatsApp, and the studio confirms availability.
 - Optional newsletter endpoint: set `NEXT_PUBLIC_NEWSLETTER_ENDPOINT` to an endpoint that accepts `POST` with `{ "email": "..." }`. Otherwise the form explicitly displays demo mode and does **not** store subscribers.
 
 ## Before launching a real studio website
 
-- Replace the placeholder address and contact details in `src/components/Footer.tsx`.
-- Add the studio's real WhatsApp booking number to `.env.local`.
+- Verify the studio address and contact number.
+- Confirm the studio phone number accepts WhatsApp messages.
 - Connect the newsletter backend, or remove the signup section.
 - Replace demo photography with licensed, high-resolution studio images.
 - Review service descriptions with the business owner; pricing and availability are **not** advertised or assumed.
